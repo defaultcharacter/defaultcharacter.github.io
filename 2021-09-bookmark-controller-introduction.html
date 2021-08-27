@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Introducing Bookmark Controller – Default Character</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browser Extension that helps you search through and modify your Bookmarks, without making those modifications permanent.">
+  <meta name="keywords" content="bookmark library search modify rule" />
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Introducing Bookmark Controller">
+  <meta name="twitter:description" content="Browser Extension that helps you search through and modify your Bookmarks, without making those modifications permanent.">
+  <meta name="twitter:creator" content="@defaultchar">
+  <meta name="twitter:image" content="https://defaultcharacter.com/2021-09-bookmark-controller-introduction/results-page.png">
+
+  <link rel="stylesheet" 
+        href="https://unpkg.com/glightbox@3.0.9/dist/css/glightbox.min.css" 
+        integrity="sha384-HKcSXXw9xbFdGucw4UH1crJZeZ2tULs/QEvjGpdfLgZxfiScCiv2YQa3kWbchYBg" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <b><a href="https://defaultcharacter.com">Default Character</a></b> /
+    <time datetime="2021-09">2021-09</time>
+
+    <a class="right" href="https://defaultcharacter.com#contacts">Contacts</a>
+  </header>
+  <article>
+    <h1 id="introducing-bookmark-controller" class="center">Introducing Bookmark Controller</h1>
+    <div class="feature">
+    <p><img src="2021-09-bookmark-controller-introduction/search-page.png" title="Search Page" class="glightbox" /></p>
+    </div>
+    <h2 id="about">About</h2>
+    <p>Bookmark Controller version 0.4 (codename “Hot Mess”) is a <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extension</a> that helps you <strong>search through</strong> and <strong>modify</strong> your <a href="https://dictionary.cambridge.org/dictionary/english/bookmark#cald4-1-2">Bookmarks</a>, without making those modifications permanent.</p>
+    <h2 id="download">Download</h2>
+    <ul>
+    <li><a href="https://addons.mozilla.org/en-US/firefox/addon/bookmark-controller/">Firefox Add-on</a></li>
+    <li>Not available in Chrome store</li>
+    </ul>
+    <h2 id="features">Features</h2>
+    <h3 id="a-search-engine-like-user-interface-for-your-bookmark-library">A search-engine-like user interface for your bookmark library</h3>
+    <p><img src="./2021-09-bookmark-controller-introduction/results-page.png" title="Results page" class="glightbox" /></p>
+    <h3 id="fine-grained-search-and-temporary-modification-of-your-bookmarks-using-rules">Fine-grained search and temporary modification of your bookmarks using Rules</h3>
+    <p><img src="./2021-09-bookmark-controller-introduction/results-page-rule-dropdown.png" title="Results page rule dropdown selected" class="glightbox" /></p>
+    <h3 id="a-rule-builder-to-quickly-and-easily-make-your-own-rules">A Rule Builder to quickly and easily make your own Rules</h3>
+    <p><img src="./2021-09-bookmark-controller-introduction/rule-builder-rule-page.png" title="Rule Builder page" class="glightbox" /></p>
+    <h3 id="a-rule-library-to-store-new-rules-and-discover-existing-ones">A Rule Library to store new Rules and discover existing ones</h3>
+    <p><img src="./2021-09-bookmark-controller-introduction/rule-library-page.png" title="Rule Library page" class="glightbox" /></p>
+    <h3 id="search-and-filter-for-folders-and-anything-else-you-can-think-of">Search and filter for folders (and anything else you can think of)</h3>
+    <p><img src="./2021-09-bookmark-controller-introduction/results-folder-tab.png" title="Results page folder tab" class="glightbox" /></p>
+    <h3 id="search-and-apply-rules-from-the-omnibox">Search and apply Rules from the Omnibox</h3>
+    <p><img src="./2021-09-bookmark-controller-introduction/omnibox.png" title="Omnibox" class="glightbox" /></p>
+    <h2 id="motivation">Motivation</h2>
+    <p>My browser’s bookmark library contains <strong>34056 bookmarks</strong>, many of which have only been read once. To make matters worse none of them are tagged. Instead I rely on arcane groupings of deeply nested folders, the logic of which I have long since forgotten.</p>
+    <p>I made this WebExtension to make it easier for me to search through my library and to modify the results of those searches to meet my needs. I hope it nudges me towards checking my existing bookmarks instead of automatically reaching for Google every time I need to find something.</p>
+    <p>Previous versions of Bookmark Controller allowed bookmark modifications to be made permanent and Rules to be triggered when new Bookmarks were created. Ultimately I think these features were a bit too dangerous to include in a public release, and most of the benefits can be achieved without making modifications permanent.</p>
+    <p>It’s important to note that this is very much a proof-of-concept, so a bit rough around the edges. Hopefully it can provide some inspiration to anyone interested in expanding on the idea.</p>
+    <h2 id="post-mortem">Post-mortem</h2>
+    <p>I wanted to write about my experience implementing this project.</p>
+    <ul>
+    <li>How I intended to write everything in pure Javascript with no third-party dependencies.</li>
+    <li>How the scope of the project expanded while I wasn’t paying attention.</li>
+    <li>How flawed Javascript is.</li>
+    <li>How I’m still glad it exists.</li>
+    <li>How I never want to write another line of it.</li>
+    </ul>
+    <p>But all this has been said before, and better then I could have put it. Bookmark Controller does everything I need it to do. My reserves of time and enthusiasm for this project are used up.</p>
+    <hr />
+    <h2 id="author">Author</h2>
+    <p><strong>Default Character</strong><br />
+    September 2021</p>
+      </article>
+  <footer>
+    <b><a href="https://defaultcharacter.com">Default Character</a></b> /
+    <time datetime="2021-09">2021-09</time>
+
+    <a class="right" href="https://defaultcharacter.com#contacts">Contacts</a>
+  </footer>
+  <script src="https://unpkg.com/glightbox@3.0.9/dist/js/glightbox.min.js" 
+          integrity="sha384-9Shj5jLQFBO0lpXJ9tWBpzw5GQcofB3ZxllMr6N2o4Gs4jxszBcaTLumePA2Y7/+" 
+          crossorigin="anonymous" 
+          referrerpolicy="no-referrer"></script>
+  <script>
+	  GLightbox({});
+  </script>
+</body>
+</html>
